@@ -71,8 +71,9 @@ def menu():
     print("Press 3 to Remove Student")
     print("Press 4 to Edit Student")
     print("Press 5 to Search Student")
+    print("Press 6 to Exit")
     menuInp = input("Enter Your Choice:")
-    validRanges = ["1","2","3","4","5"]
+    validRanges = ["1","2","3","4","5","6"]
     if menuInp in validRanges:
         if menuInp == "1":
             listAll()
@@ -84,6 +85,10 @@ def menu():
             edit()
         elif menuInp == "5":
             search()
+        elif menuInp == "6":
+            subprocess.call("cls", shell=True)
+            print("Good Bye!")
+            return
         anyKeyContinue()
     else:
         print("Invalid Input!")
